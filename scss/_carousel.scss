@@ -1,0 +1,188 @@
+@import "_mixins";
+@import "_variables";
+
+//definición elemento padre
+.container__slider{ 
+    @include sizes ($container_slider_height,$container_slider_width);
+    @include flex-row-center;
+}
+
+//se ocultan los inputs radio
+input[type=radio]{
+    display: none;
+}
+
+//definición elemento contenedor
+.container{
+    @include sizes ($container_height,$container_width);
+    @include flex-row-center;
+    align-items: center;
+
+}
+
+//definición contenedor de tarjetas
+.cards{
+    position: relative;//se posiciona las tarjetas sobre el contenedor cards
+    @include sizes ($cards_height,$cards_width);
+    perspective:$perspective_size; //determina la distancia entre el plano z=0 y el usuario para dar algo de perspectiva al elemento 3D posicionado.
+    transform-style: preserve-3d; //establece si el elemento hijo esta posicionado en el espacio 3D sino estaría en el espacio del elemento.
+    @include flex-row-center;
+    align-items: center;
+}
+
+//definición contenedor de tarjetas
+.card{
+    position: absolute; //se posiciona las tarjetas sobre el contenedor cards
+    cursor: pointer;
+    transition: transform 0.7s; // animacion de giro de carrusel
+    img{
+        border-radius: 10px;
+        box-shadow: 0px 20px 20px rgb(87, 87, 87); /* offset-x | offset-y | blur-radius | color */
+    }
+    
+}
+
+/*-----------------------------------------------LOGICA DE SWITCHEO DE IMAGENES--------------------------------------------------------------------*/
+$a:0; // variable auxiliar
+
+/*imagen central, si estoy en la 1 y presiono iamgen lateral cambio a la 2, luego 3, etc o bien a la 9 u 8, etc, en bucle*/
+@for $i from 1 through 9{
+    #item-#{$i}:checked ~ .cards #selector-#{$i}{
+        /*Imagen centrada de frente*/
+        transform: translate3d(0%, 0, 0px); // translate3d(eje x, eje y, eje z) 
+    }
+}
+
+/*selecion imagen 2, si estoy en la 2 y presiono iamgen lateral cambio a la 3, luego 4, etc o bien a la 1, 9, 8, etc, en bucle*/
+@for $i from 1 through 9{
+    $a:$i+1;
+    @if $a<=9{
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            /*imagenes laterales derecha separada una 90% de la central y desplazada en Z hacia atras 200px. Además se gira 50° en 
+            Y*/
+            transform: translate3d(90%, 0, -200px) rotateY(50deg);
+            opacity: 0.6;
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            transform: translate3d(90%, 0, -200px) rotateY(50deg);
+            opacity: 0.6;
+        }
+    }
+}
+
+/*selecion imagen 3, si estoy en la 3 y presiono iamgen lateral cambio a la 4, luego 5, etc o bien a la 2, 1, 9, etc, en bucle*/
+/*Se oculta imagen para que solo se muestre la central, y las 2 laterales*/
+@for $i from 1 through 9{
+    $a:$i+2;
+    @if $a<=9{
+        /*imagenes lateral derecha, separada un 120% de la central y desplazada en Z hacia atras -800px. Además se gira 90° en 
+        Y, se coloca solo para que no rompa la animación de desplazamiento*/
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            transform: translate3d(120%, 0, -800px) rotateY(90deg); 
+            opacity: 0;
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            transform: translate3d(120%, 0, -800px) rotateY(90deg); 
+            opacity: 0;
+        }
+    }
+}
+
+/*selecion imagen 4, si estoy en la 4 y presiono iamgen lateral cambio a la 5, luego 6, etc o bien a la 3, 2, 1, etc, en bucle*/
+/*Se oculta imagen para que solo se muestre la central, y las 2 laterales*/
+@for $i from 1 through 9{
+    $a:$i+3;
+    @if $a<=9{
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            display: none; 
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            display: none;
+        }
+    }
+}
+
+
+/*selecion imagen 5, si estoy en la 5 y presiono iamgen lateral cambio a la 6, luego 7, etc o bien a la 4, 3, 2, etc, en bucle*/
+/*Se oculta imagen para que solo se muestre la central, y las 2 laterales*/
+@for $i from 1 through 9{
+    $a:$i+4;
+    @if $a<=9{
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            display: none; 
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            display: none;
+        }
+    }
+}
+
+/*selecion imagen 6, si estoy en la 6 y presiono iamgen lateral cambio a la 7, luego 8, etc o bien a la 5, 4, 3, etc, en bucle*/
+/*Se oculta imagen para que solo se muestre la central, y las 2 laterales*/
+@for $i from 1 through 9{
+    $a:$i+5;
+    @if $a<=9{
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            display: none; 
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            display: none;
+        }
+    }
+}
+
+/*selecion imagen 7, si estoy en la 7 y presiono iamgen lateral cambio a la 8, luego 9, etc o bien a la 6, 5, 4, etc, en bucle*/
+/*Se oculta imagen para que solo se muestre la central, y las 2 laterales*/
+@for $i from 1 through 9{
+    $a:$i+6;
+    @if $a<=9{
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            display: none; 
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            display: none;
+        }
+    }
+}
+
+/*selecion imagen 8, si estoy en la 8 y presiono iamgen lateral cambio a la 9, luego 1, etc o bien a la 7, 6, 5, etc, en bucle*/
+@for $i from 1 through 9{
+    $a:$i+7;
+    @if $a<=9{
+        /*imagenes lateral izquierda separada un -120% de la central y desplazada en Z hacia atras -800px. Además se gira -90° en 
+        Y, se coloca solo para que no rompa la animación de desplazamiento*/
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            transform: translate3d(-120%, 0, -800px) rotateY(-90deg);
+            opacity: 0; 
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            transform: translate3d(-120%, 0, -800px) rotateY(-90deg);
+            opacity: 0;
+        }
+    }
+}
+
+/*selecion imagen 9, si estoy en la 9 y presiono iamgen lateral cambio a la 1, luego 2, etc o bien a la 8, 7, 6, etc, en bucle*/
+@for $i from 1 through 9{
+    $a:$i+8;
+    @if $a<=9{
+        /*imagenes lateral izquierda separada un -90% de la central y desplazada en Z hacia atras 200px. Además se gira -50° en 
+        Y*/
+        #item-#{$i}:checked ~ .cards #selector-#{$a}{
+            transform: translate3d(-90%, 0, -200px) rotateY(-50deg);
+            opacity: 0.6;
+        }
+    }@else{
+        #item-#{$i}:checked ~ .cards #selector-#{$a - 9}{
+            transform: translate3d(-90%, 0, -200px) rotateY(-50deg);
+            opacity: 0.6;
+        }
+    }
+}
