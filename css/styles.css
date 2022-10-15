@@ -249,7 +249,8 @@ footer {
 .button--position {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 /*formato del texto dentro del botón*/
 .boton_volver {
@@ -515,7 +516,7 @@ footer {
   /*------------------------------------------------SECTION HELADOS-------------------------------------------------*/
   /*display grid para organizar los elementos*/
   .helados__section--aligment {
-    grid-template-rows: 3rem 400px 40px; }
+    grid-template-rows: 3rem 400px 3.5rem; }
   /*formato del box contenedor del lsitado*/
   .box__formato {
     overflow-y: scroll;
@@ -1651,7 +1652,7 @@ input[type=radio] {
   /*------------------------------------------------SECTION HELADOS-------------------------------------------------*/
   /*display grid para organizar los elementos*/
   .helados__section--aligment {
-    grid-template-rows: 3rem 400px 40px; }
+    grid-template-rows: 3rem 400px 3.5rem; }
   /*formato del box contenedor del lsitado*/
   .box__formato {
     overflow-y: scroll;

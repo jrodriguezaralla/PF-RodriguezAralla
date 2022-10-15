@@ -24,6 +24,7 @@
 /*posicionamiento del botón volver a la página de menúes*/
 .button--position{
     @include flex-row-center;
+    align-items: center;
 }
 
 /*formato del texto dentro del botón*/
