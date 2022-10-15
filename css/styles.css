@@ -317,8 +317,6 @@ footer {
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
   .cards {
     transform: scale(0.8, 0.8); }
-  .container__slider {
-    overflow: hidden; }
   /*------------------------------------------------SECTION CONTACTO------------------------------------------------*/
   .contacto__section--style {
     height: 85%;
@@ -375,10 +373,9 @@ footer {
     transform: scale(0.8, 0.8); }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
   .cards {
-    transform: scale(0.5, 0.5); }
+    transform: scale(0.6, 0.6); }
   .galeria__section--aligment {
-    overflow-y: scroll;
-    height: 100%; }
+    height: 500px; }
   /*------------------------------------------------SECTION CONTACTO-------------------------------------------------*/
   .contacto__section--aligment {
     transform: scale(0.9, 0.9);
@@ -1456,8 +1453,6 @@ input[type=radio] {
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
   .cards {
     transform: scale(0.8, 0.8); }
-  .container__slider {
-    overflow: hidden; }
   /*------------------------------------------------SECTION CONTACTO------------------------------------------------*/
   .contacto__section--style {
     height: 85%;
@@ -1514,10 +1509,9 @@ input[type=radio] {
     transform: scale(0.8, 0.8); }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
   .cards {
-    transform: scale(0.5, 0.5); }
+    transform: scale(0.6, 0.6); }
   .galeria__section--aligment {
-    overflow-y: scroll;
-    height: 100%; }
+    height: 500px; }
   /*------------------------------------------------SECTION CONTACTO-------------------------------------------------*/
   .contacto__section--aligment {
     transform: scale(0.9, 0.9);
