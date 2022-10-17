@@ -5,6 +5,7 @@
 .container__slider{ 
     @include sizes ($container_slider_height,$container_slider_width);
     @include flex-row-center;
+    align-items: center;
 }
 
 //se ocultan los inputs radio
