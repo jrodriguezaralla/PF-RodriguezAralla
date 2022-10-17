@@ -312,13 +312,16 @@ footer {
     align-content: start;
     overflow-y: scroll; }
   /*-------------------------------------------------SECTION PROMOS-------------------------------------------------*/
+  /*se alinean contenedores al inicio de la pantalla y si ha desbordamiento que se scrolee*/
   .promos__section--aligment {
     align-content: flex-start;
     overflow-y: scroll; }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
+  /*se redimensiona carrusel a un 80% para que se ajuste a la pantalla*/
   .cards {
     transform: scale(0.8, 0.8); }
   /*------------------------------------------------SECTION CONTACTO------------------------------------------------*/
+  /*se rindica un nuevo tamaño de alto y ancho al formulario*/
   .contacto__section--style {
     height: 85%;
     width: 90%; }
@@ -354,6 +357,7 @@ footer {
 /*----------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-height: 600px) {
   /*------------------------------------------------SECTION NOSOTROS------------------------------------------------*/
+  /*se da el mismo formato que pantalla tablet al momento de rotar pantallas en dispositivos móviles*/
   .nosotros__section {
     align-content: flex-start;
     justify-content: center; }
@@ -370,17 +374,22 @@ footer {
     font-size: 1rem;
     width: 100%; }
   /*-----------------------------------------------SECTION SANDWICHES-----------------------------------------------*/
+  /*se redimensiona contendor a un 80% para que se ajuste a la pantalla*/
   .sandwich__section--aligment {
     transform: scale(0.8, 0.8); }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
+  /*se redimensiona carrusel a un 60% para que se ajuste a la pantalla*/
   .cards {
     transform: scale(0.6, 0.6); }
+  /*y que el alto sea fijo para que no se disotrsionen imagenes por el tipo de dispositivo móvil*/
   .galeria__section--aligment {
     height: 500px; }
   /*------------------------------------------------SECTION CONTACTO-------------------------------------------------*/
+  /*se redimensiona formulario a un 90% para que se ajuste a la pantalla*/
   .contacto__section--aligment {
     transform: scale(0.9, 0.9);
     height: 500px; }
+  /*se le asigna un nuevo ancho y se redimenisona el grid a un 80%*/
   .contacto__section--style {
     width: 60%;
     transform: scale(0.8, 0.8); } }
@@ -472,9 +481,11 @@ footer {
     align-content: start;
     overflow-y: scroll; }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
+  /*se redimensiona carrusel a un 60% para que se ajuste a la pantalla*/
   .cards {
     transform: scale(0.6, 0.6); }
   /*------------------------------------------------SECTION CONTACTO------------------------------------------------*/
+  /*se redimensiona formulario a un 90% para que se ajuste a la pantalla y se le asigna nuevos valores de alto y ancho*/
   .contacto__section--aligment {
     transform: scale(0.9, 0.9);
     height: 500px;
@@ -1448,13 +1459,16 @@ input[type=radio] {
     align-content: start;
     overflow-y: scroll; }
   /*-------------------------------------------------SECTION PROMOS-------------------------------------------------*/
+  /*se alinean contenedores al inicio de la pantalla y si ha desbordamiento que se scrolee*/
   .promos__section--aligment {
     align-content: flex-start;
     overflow-y: scroll; }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
+  /*se redimensiona carrusel a un 80% para que se ajuste a la pantalla*/
   .cards {
     transform: scale(0.8, 0.8); }
   /*------------------------------------------------SECTION CONTACTO------------------------------------------------*/
+  /*se rindica un nuevo tamaño de alto y ancho al formulario*/
   .contacto__section--style {
     height: 85%;
     width: 90%; }
@@ -1490,6 +1504,7 @@ input[type=radio] {
 /*----------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-height: 600px) {
   /*------------------------------------------------SECTION NOSOTROS------------------------------------------------*/
+  /*se da el mismo formato que pantalla tablet al momento de rotar pantallas en dispositivos móviles*/
   .nosotros__section {
     align-content: flex-start;
     justify-content: center; }
@@ -1506,17 +1521,22 @@ input[type=radio] {
     font-size: 1rem;
     width: 100%; }
   /*-----------------------------------------------SECTION SANDWICHES-----------------------------------------------*/
+  /*se redimensiona contendor a un 80% para que se ajuste a la pantalla*/
   .sandwich__section--aligment {
     transform: scale(0.8, 0.8); }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
+  /*se redimensiona carrusel a un 60% para que se ajuste a la pantalla*/
   .cards {
     transform: scale(0.6, 0.6); }
+  /*y que el alto sea fijo para que no se disotrsionen imagenes por el tipo de dispositivo móvil*/
   .galeria__section--aligment {
     height: 500px; }
   /*------------------------------------------------SECTION CONTACTO-------------------------------------------------*/
+  /*se redimensiona formulario a un 90% para que se ajuste a la pantalla*/
   .contacto__section--aligment {
     transform: scale(0.9, 0.9);
     height: 500px; }
+  /*se le asigna un nuevo ancho y se redimenisona el grid a un 80%*/
   .contacto__section--style {
     width: 60%;
     transform: scale(0.8, 0.8); } }
@@ -1608,9 +1628,11 @@ input[type=radio] {
     align-content: start;
     overflow-y: scroll; }
   /*------------------------------------------------SECTION GALERIA-------------------------------------------------*/
+  /*se redimensiona carrusel a un 60% para que se ajuste a la pantalla*/
   .cards {
     transform: scale(0.6, 0.6); }
   /*------------------------------------------------SECTION CONTACTO------------------------------------------------*/
+  /*se redimensiona formulario a un 90% para que se ajuste a la pantalla y se le asigna nuevos valores de alto y ancho*/
   .contacto__section--aligment {
     transform: scale(0.9, 0.9);
     height: 500px;
