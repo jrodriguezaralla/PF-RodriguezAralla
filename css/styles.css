@@ -578,7 +578,7 @@ footer {
 /*-----------------------------------------------VARIABLES HELADOS----------------------------------------------------------*/
 /*----------------------------------------------VARIABLES CAROUSEL---------------------------------------------------------*/
 .container__slider {
-  height: 80%;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -1135,14 +1135,10 @@ input[type=radio] {
 /*-----------------------------------------------GALERIA----------------------------------------------------------*/
 /*en el section se colocan todas las imagenes*/
 .galeria__section--aligment {
+  height: 100%;
   grid-area: section;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem 1rem;
-  justify-content: space-evenly;
-  align-content: space-evenly; }
+  justify-content: center;
+  align-content: center; }
 
 .galeria__section--background {
   background-color: #efefef; }

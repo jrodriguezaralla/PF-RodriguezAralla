@@ -185,11 +185,10 @@
 /*-----------------------------------------------GALERIA----------------------------------------------------------*/
 /*en el section se colocan todas las imagenes*/
 .galeria__section--aligment{
+    height: 100%;
     grid-area: section;
-    @include flex_wrap; //se posicionan en forma wrap para que sea responsive
-    @include grid_aligment ($grid_gap, $grid_padding);
-    justify-content: space-evenly;
-    align-content: space-evenly;
+    justify-content: center;
+    align-content: center;
 }
 
 .galeria__section--background{
